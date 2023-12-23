@@ -1,10 +1,17 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Libraries
+import { createSignal } from "solid-js";
+import { useTransContext } from "@mbarzda/solid-i18next";
+
+// Components
+
+// Utilities
+import solidLogo from "./assets/solid.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [t] = useTransContext();
+  const [count, setCount] = createSignal(0);
 
   return (
     <>
@@ -16,7 +23,7 @@ function App() {
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
-      <h1>Vite + Solid</h1>
+      <h1>{t("greeting")}</h1>
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count()}
@@ -29,7 +36,7 @@ function App() {
         Click on the Vite and Solid logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
