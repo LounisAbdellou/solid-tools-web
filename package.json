@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/css": "^11.11.2",
     "@mbarzda/solid-i18next": "^1.4.1",
     "@solidjs/router": "^0.10.5",
     "@types/lodash": "^4.14.202",
