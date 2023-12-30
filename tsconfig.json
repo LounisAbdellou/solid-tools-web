@@ -14,7 +14,7 @@
       "@services/*": ["./src/core/services/*"],
       "@components/*": ["./src/core/components/*"],
       "@contexts/*": ["./src/core/contexts/*"],
-      "@types/*": ["./src/core/types/*"]
+      "@interfaces/*": ["./src/core/interfaces/*"]
     },
 
     /* Bundler mode */

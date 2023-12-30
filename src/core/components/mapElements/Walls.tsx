@@ -3,8 +3,14 @@
 // Components
 
 // Utilities
+import { Wall } from "@interfaces/mapEditor";
+import { Component } from "solid-js";
 
-const Walls = (props: any) => {
+interface Props {
+  walls: Wall[];
+}
+
+const Walls: Component<Props> = ({ walls }) => {
   const handleMouseDown = (e: MouseEvent) => {};
 
   const handleMouseUp = (e: MouseEvent) => {};
@@ -12,10 +18,18 @@ const Walls = (props: any) => {
   const handleMouseMove = (e: MouseEvent) => {};
 
   return (
-    <g>
-      {/* {props.walls.map((wall, index) => {
-        <polygon></polygon>;
-      })} */}
+    <g id="WALLS">
+      {walls.map((wall) => {
+        return (
+          <polygon
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
+            {wall.localId}
+          </polygon>
+        );
+      })}
     </g>
   );
 };

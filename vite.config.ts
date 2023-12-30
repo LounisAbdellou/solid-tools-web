@@ -13,7 +13,7 @@ export default defineConfig({
       "@styles": `${path.resolve(__dirname, "./src/styles/")}`,
       "@assets": `${path.resolve(__dirname, "./src/assets/")}`,
       "@hooks": `${path.resolve(__dirname, "./src/core/hooks/")}`,
-      "@types": `${path.resolve(__dirname, "./src/core/types/")}`,
+      "@interfaces": `${path.resolve(__dirname, "./src/core/interfaces/")}`,
       "@contexts": `${path.resolve(__dirname, "./src/core/contexts/")}`,
       "@components": `${path.resolve(__dirname, "./src/core/components/")}`,
       "@services": `${path.resolve(__dirname, "./src/core/services/")}`,

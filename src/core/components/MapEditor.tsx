@@ -9,6 +9,13 @@ import styles from "@styles/mapEditor.module.css";
 const MapEditor = () => {
   let svgMap;
 
+  const walls = [
+    {
+      id: 1,
+      localId: "WALL_123",
+    }
+  ]
+
   const handleMouseDown = (e: MouseEvent) => {};
 
   const handleMouseUp = (e: MouseEvent) => {};
@@ -23,7 +30,7 @@ const MapEditor = () => {
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      <Walls />
+      <Walls walls={walls} />
     </svg>
   );
 };
